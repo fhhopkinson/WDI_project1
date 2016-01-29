@@ -1,4 +1,4 @@
-$(function(){
+/*$(function(){
 }
 
 
@@ -39,4 +39,9 @@ CSS will require 26 tiles at least, one password input box. one submit button. S
 
 
 considerations: $("#score1").text(player1Score)
-                $("#score2").text(Player2Score)
+                $("#score2").text(Player2Score)*/
+
+
+body {
+  background: red;
+}
