@@ -1,47 +1,90 @@
-/*$(function(){
+body {
+  background-color: #2c3e50;
+  margin-bottom: 60px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; 
+}
+  
+.container {
+  width: 1000px;
+  height: 500px;
+  margin-left: 200px;
+  border: 1px;
+  border-color: black;
+  text-align: center;
+}
+
+h1 {
+text-align: center;
+
+}
+
+.squirrel {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 9;
+  line-height: 50px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: white;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-left: 1px;
+  margin-bottom: 50px;
+  margin-top: 350px;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 9;
+  line-height: 50px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: #2c3e50;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-left: 1px;
+  margin-top: 0 px;
+}
+
+#  {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 9;
+  line-height: 50px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: #2c3e50;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-left: 40px;
+  margin-top: 0px;
 }
 
 
-//Minimum Viable Product
+.tile:hover {
+ background-color: #34495e;
+ border-color: #d35400;
+ color: #d35400; }
+}
 
-2 player
-enter a word
-guess a word
-win logic
-Basic CSS
-use jQuery
-Bucket List
-
-Score Best of 5 
-
-Hangman picture/animation
-sound effects
-timer
-CSS fest
-
-
-Intital stuff to get to grips with:
-
-submit text into a password box so that the first players word is hidden input type="password" as the text is already hidden on committing it.
-
-<asp:TextBox ID="txtPassword" runat="server" SkinID="txtLogin" value="Password..." TabIndex????
-
-then submit button. This submits into an array on the on click function.
-
-submit into array so that the letters of the chosen word can be matched to the index and displayed/hidden on each tile on the display row. [--------],
-[0, 1, 2, 3, 4, 5, 6, 7]. use .each to loop through the array and the letter comparison to determine the matches. 
-
-when the correct letter is selected from the buttons displaying the letters on the on click if the letter matches any in the array the letter is revealed. If the letter is not in the arr then the tile is hidden.(the amount of letters can be recorded for the hanging feature.) on click hide every tile of the alphabet.
-
-win logic is created by both arrays matching each other and then  saying that player two wins. Player one wins when all the letters of the alphabet are exhausted.
-
-CSS will require 26 tiles at least, one password input box. one submit button. Score counter? pop up.
-
-
-considerations: $("#score1").text(player1Score)
-                $("#score2").text(Player2Score)*/
-
-
-body {
-  background: red;
+.space1:hover {
+ background-color: #34495e;
+ border-color: #d35400;
+ color: #d35400; }
 }
