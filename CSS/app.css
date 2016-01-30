@@ -15,8 +15,28 @@ body {
 
 h1 {
 text-align: center;
-
+margin-left: 300px;
 }
+
+#refresh {
+  width: 75px;
+  height: 30px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 9;
+  line-height: 30px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: white;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-right: 25px;
+  margin-top: 0px;
+}
+
 
 .squirrel {
   width: 50px;

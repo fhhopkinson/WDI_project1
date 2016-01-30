@@ -53,10 +53,22 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
   } else {
     console.log("else at the end of the win logic " + this.id);
   }
+
+
+
 });
+
+ $("#refresh").on('click', function () {
+  location.reload(true);
+});
+  console.log('reset');
 });
 
 
-//make space bar populate a color.
-
-// $(this.id).toggle();
+  
+//   $("#refresh").on('click', function () {
+//   location.reload(true);
+// });
+//   console.log('reset');
+ 
+ 
