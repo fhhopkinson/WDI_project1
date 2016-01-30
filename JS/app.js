@@ -9,8 +9,10 @@ $(function(){
     e.preventDefault();
     var nextWord;
     var startWord = $("input#startWord").val();
+    startWord = startWord.split(" ").join("_");
     nextWord = startWord.toUpperCase(this.id);
     startArray = nextWord.split("");
+
     console.log(nextWord)
     console.log(startArray);
     
@@ -45,7 +47,8 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
   };
   if (lives === 0) {
     console.log('player1 wins');
-  }else if(startArray.toString() === squirrelLetterArr.toString()){
+  }else if(startArray.toString() === squirrelLetterArr.toString())
+  {
     console.log('player2 wins');
   } else {
     console.log("else at the end of the win logic " + this.id);
