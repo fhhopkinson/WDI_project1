@@ -17,8 +17,8 @@ $(function(){
   });
 //win logic
 var lives = 7;
-var player1;
-var player2;
+// var player1;
+// var player2;
 
 var squirrelLetterArr = [];
 
@@ -30,7 +30,6 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
 
   console.log('click');
   console.log("this is startArray " + startArray);
- var letterClicked = $(this.id).val();
     
   //If letter clicked is in startArray...
   if(startArray.indexOf(this.id)!== -1) {
@@ -38,19 +37,19 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
     squirrelsArray[squirrelIndex].innerHTML = (this.id);//Add HTML of clicked letter to the appropriate index of squirrel array
     squirrelLetterArr[startArray.indexOf(this.id)] = this.id; //Push letter of button pressed to squirrelLetterArr
 
-  console.log('is squirrelLetterArr filling: ' + squirrelLetterArr);
+  console.log('what is squirrelLetterArr: ' + squirrelLetterArr);
   console.log('squirrelIndex' + squirrelIndex);
   }else {
     lives-=1;
     console.log("number of lives" + lives);
-    if (lives === 0) {
-     console.log('player1 wins');
-     }else if(startArray == squirrelLetterArr){
-        console.log('player2 wins');
-     } else {
-        console.log("else at the end of the win logic" + this.id);
-     }
   };
+  if (lives === 0) {
+    console.log('player1 wins');
+  }else if(startArray.toString() === squirrelLetterArr.toString()){
+    console.log('player2 wins');
+  } else {
+    console.log("else at the end of the win logic " + this.id);
+  }
 });
 });
 

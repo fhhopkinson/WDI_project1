@@ -4,12 +4,12 @@
 
 //Minimum Viable Product
 
-2 player
-enter a word
-guess a word
-win logic
-Basic CSS
-use jQuery
+2 player // done
+enter a word // done
+guess a word // done
+win logic 
+use jQuery // done
+
 Bucket List
 
 Score Best of 5 
