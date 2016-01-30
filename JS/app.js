@@ -2,16 +2,20 @@ $(function(){
 
 
   //Placeholder Array for testing purposes
-  var startArray = ["A", "b", "c"];
+  var startArray = [];
   console.log(startArray);
 
   $("form").on("submit", function(e){
     e.preventDefault();
+    var nextWord;
     var startWord = $("input#startWord").val();
+    nextWord = startWord.toUpperCase(this.id);
 
-    startArray = startWord.split("");
+    
+    console.log(nextWord)
+    startArray = nextWord.split("");
     console.log(startArray);
-
+    
   });
 
 
@@ -30,7 +34,6 @@ var squirrelsArray = $(".squirrel");
 //Add event listener to letter tiles
 $('.tile').on("click",function() {
   console.log('click');
-  endArray = $("input#tile").push();
   console.log(startArray);
 
   //If letter clicked is in startArray...
