@@ -6,7 +6,7 @@ body {
   
 .container {
   width: 1000px;
-  height: 500px;
+  height: 600px;
   margin-left: 200px;
   border: 1px;
   border-color: black;
@@ -14,8 +14,27 @@ body {
 }
 
 h1 {
-text-align: center;
-margin-left: 300px;
+  text-align: center;
+  margin-left: 300px;
+}
+
+
+#winner{
+  width: 75px;
+  height: 30px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: white;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-right: 70px;
+  margin-top: 0px;
 }
 
 #refresh {
@@ -37,6 +56,35 @@ margin-left: 300px;
   margin-top: 0px;
 }
 
+ #lives{
+  width: 75px;
+  height: 30px;
+  list-style: none;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 9;
+  line-height: 30px; 
+  font-size: 20px;
+  /*position: relative;*/
+  background-color: white;
+  color: #d35400;
+  border-color: #d35400;
+  border: 3px solid;
+  margin-right: 50px;
+  margin-top: 0px;
+}
+.hang10{
+ width:300px;
+ height:500px;
+ background-color:white;
+ display: inline-block;
+ background-image: url("../images/IMG_2160.JPG");
+ background-repeat: no-repeat;
+ background-size: cover;
+ margin-left: 50px;
+
+}
 
 .squirrel {
   width: 50px;
@@ -54,8 +102,8 @@ margin-left: 300px;
   border-color: #d35400;
   border: 3px solid;
   margin-left: 1px;
-  margin-bottom: 50px;
-  margin-top: 350px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .tile {

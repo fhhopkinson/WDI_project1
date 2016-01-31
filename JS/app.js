@@ -45,7 +45,7 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
     lives-=1;
     console.log("number of lives" + lives);
   };
-  if (lives === 0) {
+  if (lives == 0) {
     console.log('player1 wins');
   }else if(startArray.toString() === squirrelLetterArr.toString())
   {
@@ -65,10 +65,5 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
 });
 
 
-  
-//   $("#refresh").on('click', function () {
-//   location.reload(true);
-// });
-//   console.log('reset');
  
  
