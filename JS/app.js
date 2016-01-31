@@ -18,10 +18,10 @@ $(function(){
     
   });
 //win logic
-var lives = 7;
+
 // var player1;
 // var player2;
-
+var lives = 7;
 var squirrelLetterArr = [];
 
 //Add event listener to letter tiles
@@ -43,13 +43,16 @@ var squirrelIndex = startArray.indexOf(this.id);//Attach desired index number to
   console.log('squirrelIndex' + squirrelIndex);
   }else {
     lives-=1;
-    console.log("number of lives" + lives);
+    // lives.innerHTML('#lives');
+    $('#lives').text(lives);
+    console.log("number of lives " + lives);
   };
   if (lives == 0) {
     console.log('player1 wins');
+    $('#winner').text("Player 1");
   }else if(startArray.toString() === squirrelLetterArr.toString())
-  {
-    console.log('player2 wins');
+{ console.log('player2 wins');
+$('#winner').text("Player 2");
   } else {
     console.log("else at the end of the win logic " + this.id);
   }
