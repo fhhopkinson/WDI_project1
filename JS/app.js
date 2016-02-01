@@ -52,13 +52,48 @@ $(function(){
         correctLettersArr[index] = self.id;
         match = true;
       }
-      if(!match && lives > 1) {
-        lives-=1;
-        // lives.innerHTML('#lives');
-        $('#lives').text(lives);
-        console.log("number of lives " + lives);
-      }
     });
+
+    if(!match && lives >= 1) {
+      lives-=1;
+      // lives.innerHTML('#lives');
+      $('#lives').text(lives);
+      console.log("number of lives " + lives);
+    }
+
+    if (lives == 0) {
+      console.log('player1 wins');
+      $('#winner').text("Player 1");
+    } else if(startArray.toString() === correctLettersArr.toString()) {
+      console.log('player2 wins');
+      $('#winner').text("Player 2");
+    } else {
+      console.log("else at the end of the win logic " + this.id);
+    } 
+
+    // if (lives = 10 ) {
+    //   console.log("lives")
+    // } else if (lives = 9) {
+    // $(".hang10").css("background-image", "url('/images/IMG_1.JPG')");
+    // } else if (lives = 8) {
+    // $(".hang10").css("background-image", "url('/images/IMG_2.JPG')");
+    // } else if (lives = 7) {
+    // $(".hang10").css("background-image", "url('/images/IMG_3.JPG')");
+    // console.log('lives2')
+    // } else if (lives = 6) {
+    // $(".hang10").css("background-image", "url('/images/IMG_4.JPG')");
+    // } else if (lives = 5) {
+    // $(".hang10").css("background-image", "url('/images/IMG_5.JPG')");
+    // } else if (lives = 4) {
+    // $(".hang10").css("background-image", "url('/images/IMG_6.JPG')");
+    // } else if (lives = 3) {
+    // $(".hang10").css("background-image", "url('/images/IMG_7.JPG')");
+    // } else if (lives = 2) {
+    // $(".hang10").css("background-image", "url('/images/IMG_8.JPG')");
+    // } else if (lives = 1) {
+    // $(".hang10").css("background-image", "url('/images/IMG_9.JPG')");
+    // }
+    // changeImage();
   });
 
 
@@ -77,15 +112,7 @@ $(function(){
     //   console.log("number of lives " + lives);
     // }
 
-    if (lives == 0) {
-      console.log('player1 wins');
-      $('#winner').text("Player 1");
-    } else if(startArray.toString() === correctLettersArr.toString()) {
-      console.log('player2 wins');
-      $('#winner').text("Player 2");
-    } else {
-      console.log("else at the end of the win logic " + this.id);
-    } 
+
   
 
   // $("#refresh").on('click', function () {
@@ -117,29 +144,10 @@ $(function(){
 
 
 
+    
+
  
-  if (lives = 10 ) {
-    console.log("lives")
-  } else if (lives = 9) {
-  $(".hang10").css("background-image", "url('/images/IMG_1.JPG')");
-  } else if (lives = 8) {
-  $(".hang10").css("background-image", "url('/images/IMG_2.JPG')");
-  } else if (lives = 7) {
-  $(".hang10").css("background-image", "url('/images/IMG_3.JPG')");
-  console.log('lives2')
-  } else if (lives = 6) {
-  $(".hang10").css("background-image", "url('/images/IMG_4.JPG')");
-  } else if (lives = 5) {
-  $(".hang10").css("background-image", "url('/images/IMG_5.JPG')");
-  } else if (lives = 4) {
-  $(".hang10").css("background-image", "url('/images/IMG_6.JPG')");
-  } else if (lives = 3) {
-  $(".hang10").css("background-image", "url('/images/IMG_7.JPG')");
-  } else if (lives = 2) {
-  $(".hang10").css("background-image", "url('/images/IMG_8.JPG')");
-  } else if (lives = 1) {
-  $(".hang10").css("background-image", "url('/images/IMG_9.JPG')");
-  }
+
 
   $("#refresh").on('click', function () {
    location.reload(true);
