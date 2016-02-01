@@ -15,7 +15,16 @@ body {
 
 h1 {
   text-align: center;
-  margin-left: 0px;
+  /*margin-left:300px;*/
+  margin-top: 5px;
+  margin-bottom: 0px;
+  position: relative;
+}
+p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+
 }
 
 
@@ -76,14 +85,14 @@ h1 {
 }
 .hang10{
  width:400px;
- height:500px;
+ height:400px;
  background-color:white;
  display: inline-block;
  background-image: url("../images/IMG_1.JPG");
  background-repeat: no-repeat;
  background-size: cover;
  margin-left: 50px;
-
+ rotation: 180deg;
 }
 
 .answerTile {
@@ -102,8 +111,8 @@ h1 {
   border-color: #d35400;
   border: 3px solid;
   margin-left: 1px;
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin-bottom: 1px;
+  margin-top: 1px;
 }
 
 .tile {
