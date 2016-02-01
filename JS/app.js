@@ -1,9 +1,10 @@
-$(function(){
+$(function() {
 
   var startArray;
   console.log(startArray);
   $("form").on("submit", function(e){ //have to prevent default as the page refreshes after pressing enter.
     e.preventDefault();
+
     var nextWord;
     var startWord = $("input#startWord").val();
     startWord = startWord.split(" ").join("_");// turning a space into an underscore in the array
@@ -13,6 +14,8 @@ $(function(){
     $.each(startArray, function(index, value) { // add the list to the ul so that the letters go into new boxes
       ($(".answerTiles").append('<li class="answerTile"></li>'));
     });
+
+    $('.intro').hide();
   });
 //win logic
   var lives = 10;
@@ -25,15 +28,14 @@ $(function(){
     var self = this; // store this as self so we can use it inside the forEach loop.
     var match = false;
     
-    startArray.forEach(function(letter, index) { //here we have changed if to self because otherwise it would refer to .tile rather than startArray.
-      if(letter === self.id) {
+    startArray.forEach(function(letter, index) { //here we have changed this to self because otherwise it would refer to the wrong thing.
+      if(letter === self.id) { //if letter equalled the id of the startArray then print the appropriate letter into the right place.
         $answerTiles.eq(index).html(self.id);
         correctLettersArr[index] = self.id;
         match = true;
       }
     });
-
-
+  function checkWinner() {
     if(!match && lives >= 1) { //lives diminishing logic ie losing lives. if match is false lose a life
       lives-=1;
       $('#lives').text(lives);// adding number of lives to text box
@@ -44,10 +46,12 @@ $(function(){
     } else if(startArray.toString() === correctLettersArr.toString()) { //tried doing this and it worked so i kept it
       $('#winner').text("Innocent");
     } else {
+    }
     } 
+  checkWinner();
     
-
-    if (lives === 9) { //logic for image changing from good luck to hanging
+  function changePicture() {
+    if (lives === 9) { //logic for changing image from good luck to hanging
     $(".hang10").css({"background-image": "url('images/IMG_1.JPG')"});
     console.log("lives");
     } else if (lives === 8) {
@@ -69,8 +73,8 @@ $(function(){
     } else if (lives === 0) {
     $(".hang10").css({"background-image": "url('images/IMG_11.JPG')"});
     }
-
-
+  }
+  changePicture();
   });
 
   $("#refresh").on('click', function () { //refresh button logic
@@ -78,7 +82,7 @@ $(function(){
   });
 });
 
-function checkWinner() {}
-function changePicture() {}
+
+
 
 
