@@ -15,7 +15,7 @@ body {
 
 h1 {
   text-align: center;
-  margin-left: 300px;
+  margin-left: 0px;
 }
 
 
@@ -75,11 +75,11 @@ h1 {
   margin-top: 0px;
 }
 .hang10{
- width:300px;
+ width:400px;
  height:500px;
  background-color:white;
  display: inline-block;
- background-image: url("../images/IMG_2160.JPG");
+ background-image: url("../images/IMG_1.JPG");
  background-repeat: no-repeat;
  background-size: cover;
  margin-left: 50px;

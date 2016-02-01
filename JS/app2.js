@@ -32,3 +32,6 @@ CSS will require 26 tiles at least.  Score counter? pop up startWord. anitmation
 
 considerations: $("#score1").text(player1Score)
                 $("#score2").text(Player2Score)*/
+
+
+                //make space bar populate a color.
