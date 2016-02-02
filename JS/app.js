@@ -9,7 +9,7 @@ $(function() {
     var startWord = $("input#startWord").val();
     startWord = startWord.split(" ").join("_");// turning a space into an underscore in the array
     nextWord = startWord.toUpperCase(this.id); //to match the buttons on click case
-    startArray = nextWord.split(""); //spltiing the string into individual letters per index
+    startArray = nextWord.split(""); //splitting the string into individual letters per index
 
     $.each(startArray, function(index, value) { // add the list to the ul so that the letters go into new boxes
       ($(".answerTiles").append('<li class="answerTile"></li>'));
@@ -24,15 +24,19 @@ $(function() {
   $('.tile').on("click",function() {
 
     var $answerTiles = $(".answerTile");//Put answers in an array
-    var letterIndex = startArray.indexOf(this.id);//Attach desired index number to variable
+    // var letterIndex = startArray.indexOf(this.id);//Attach desired index number to variable
     var self = this; // store this as self so we can use it inside the forEach loop.
     var match = false;
-    
+    // var removeLetter = ('.tile').indexOf(this.id);
+
+     // $(this).hide(); 
+    $(this).css('color', 'black');
     startArray.forEach(function(letter, index) { //here we have changed this to self because otherwise it would refer to the wrong thing.
       if(letter === self.id) { //if letter equalled the id of the startArray then print the appropriate letter into the right place.
         $answerTiles.eq(index).html(self.id);
         correctLettersArr[index] = self.id;
         match = true;
+
       }
     });
   function checkWinner() {
