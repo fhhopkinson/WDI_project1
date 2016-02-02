@@ -1,12 +1,12 @@
 $(function() {
 
   var startArray;
-  console.log(startArray);
+
   $("form").on("submit", function(e){ //have to prevent default as the page refreshes after pressing enter.
     e.preventDefault();
-
+    
     var nextWord;
-    var startWord = $("input#startWord").val();
+    var startWord = $("input#startWord").val();// get the value of startWord into a variable
     startWord = startWord.split(" ").join("_");// turning a space into an underscore in the array
     nextWord = startWord.toUpperCase(this.id); //to match the buttons on click case
     startArray = nextWord.split(""); //splitting the string into individual letters per index
@@ -14,31 +14,28 @@ $(function() {
     $.each(startArray, function(index, value) { // add the list to the ul so that the letters go into new boxes
       ($(".answerTiles").append('<li class="answerTile"></li>'));
     });
-
-    $('.intro').hide();
+    $('.intro').hide(); // This removes the title and the top lines  so that when the boxes pop up the whole game fits on the screen which makes it more playable and I have an aversion to scrolling as it would make the too long for the screen
   });
-//win logic
+
   var lives = 10;
   var correctLettersArr = [];
   //Add event listener to letter tiles
   $('.tile').on("click",function() {
 
     var $answerTiles = $(".answerTile");//Put answers in an array
-    // var letterIndex = startArray.indexOf(this.id);//Attach desired index number to variable
     var self = this; // store this as self so we can use it inside the forEach loop.
     var match = false;
-    // var removeLetter = ('.tile').indexOf(this.id);
 
-     // $(this).hide(); 
-    $(this).css('color', 'black');
+   $(this).css('color', 'white');//
+
     startArray.forEach(function(letter, index) { //here we have changed this to self because otherwise it would refer to the wrong thing.
-      if(letter === self.id) { //if letter equalled the id of the startArray then print the appropriate letter into the right place.
+      if(letter === self.id) { //if letter equalled the id of the startArray then put the appropriate letter into the right place.
         $answerTiles.eq(index).html(self.id);
         correctLettersArr[index] = self.id;
         match = true;
-
       }
     });
+    //win logic
   function checkWinner() {
     if(!match && lives >= 1) { //lives diminishing logic ie losing lives. if match is false lose a life
       lives-=1;
@@ -54,7 +51,7 @@ $(function() {
     } 
   checkWinner();
     
-  function changePicture() {
+  function changePicture() { //wrapped in a function as it makes it easier to read but mainly it makes it repeatable.
     if (lives === 9) { //logic for changing image from good luck to hanging
     $(".hang10").css({"background-image": "url('images/IMG_1.JPG')"});
     console.log("lives");
